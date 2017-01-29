@@ -7,8 +7,8 @@ Number("); //0
 Number("000011"); //11
 Number("true"); //1
 ```
-Number()函数各种数据类型转换为数值过程<strong>复杂</strong>而且<strong>不合理</strong>.<br/>
-所以优先用parseInt()方法和parseFloat()方法.
+Number()函数各种数据类型转换为数值过程根据各种规则.
+
 
 ### parseInt()
 函数转换是“整数”字符串,逄是看其是否符合数值模式.也就是说小数点不是有效的数字字符.
