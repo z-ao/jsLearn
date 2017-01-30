@@ -27,9 +27,10 @@ num3 = num.splice(0,4,3,2,1) // num3 = [1,2,3,4] num = [3,2,1] 替换
 ```
 
 ## 迭代方法
-every-对数组中的每一项运行给定函数,如果函数的每项都返回true，就返回true.
-some-对数组中的每一项运行给定函数,如果函数的其中一项都返回true，就返回true.
-
+every-对数组中的每一项运行给定函数,如果函数的每项都返回true，就返回true.<br/>
+some-对数组中的每一项运行给定函数,如果函数的其中一项都返回true，就返回true.<br/>
+filter-对数组中的每一项运行给定函数,返回函数为true值.<br/>
+map-对数组中的每一项运行给定函数,返回函数的值.
 ```
 var nums = [1,2,3,4];
 var everyNum = nums.every(function(item){
@@ -39,5 +40,13 @@ var everyNum = nums.every(function(item){
 var someyNum = nums.some(function(item){
   return (item > 2);
 }; // true
+
+var filterNum = nums.filter(function(item){
+  return (item > 2);
+}; // [3,4]
+
+var mapNum = nums.map(function(item){
+  return (item + 2);
+}; // [3,4,5,6]
 ```
 学习数组迭代可以优化数组的任务处理
