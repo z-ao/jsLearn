@@ -1,4 +1,36 @@
-# 数据类型
-Javascript的简单数据类型有5种:Undefined,Null,Boolean,Number和String.还有复杂数据类型-Object.<br/>
-由于数据类型具有动态特性,因此没有在定义其他数据类型的必要.<br/>
-js所有值最终将是上述数据类型之一.
+## 变量类型
+### 基础类型
+Undefined, Null, Boolean, String, Number.
+### 引用类型
+是由多个值构成的对象-Object
+### 参数传递
+函数的参数都是按值传递,就是把函数外部的值,复制给函数内部的参数.
+```
+//基础类型
+function add(num){
+  num += 10;
+  return num;
+}
+
+var count = 20;
+var result = add(count);
+
+alert(count) //20
+alert(result) //30
+
+//引用类型
+function setName(obj){
+  obj.name = "ziao";
+  obj = new Object();
+  obj.name = "lea";
+}
+
+var person = new Object();
+setName(person);
+alert(person.name); //ziao
+```
+传递方法有两种,基本类型传递和引用类型传递.
+#### 变量是基本类型就按基本类型传递.会把值复制给函数的局部变量.
+#### 变量是引用类型就按引用类型传递.会把值的地址复制给函数的局部变量.而局部变量的变化会反应个函数外部.
+### 注意
+#### 函数重写变量时,这个变量引用的就是一个局部对象,而局部对象会在函数执行后被销毁.
