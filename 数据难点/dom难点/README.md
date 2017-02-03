@@ -1,40 +1,32 @@
-## 转换数值
-可以把非数值转换为数值函数:Number().把字符转换为数值函数:parseInt(),parseFloat().
-### Number()
-```
-Number("Hello Wrold!"); //NaN
-Number("); //0
-Number("000011"); //11
-Number("true"); //1
-```
-Number()函数各种数据类型转换为数值过程根据各种规则.
+## 获取节点
+### 获取元素的常见方法有
+   getElementById 
+   getElementsByTagName
+   getElementsByClassName
+   getElementsByName
+   
 
-
-### parseInt()
-函数转换是“整数”字符串,逄是看其是否符合数值模式.也就是说小数点不是有效的数字字符.
-#### 第一个参数是转换的值,第二个参数是基数--即多少进制.默认为十进制
+### 获取元素的较常见方法
+    querySelector()
+    querySelectorAll()
 ```
-parseInt("123blue") // 123
-parseInt("") // NaN
-parseInt("123") // 123
-parseInt("123.222") // 123
-parseInt("0xf") // 15
-```
-### parseFloat()
-函数转换是字符串,逄是看其是否符合数值模式.
-#### 第一个参数是转换的值,第二个参数是基数--即多少进制.默认为十进制
-```
-parseFloat("123blue") //123
-parseFloat("") //NaN
-parseFloat("123") //123
-parseFloat("123.222") //123.222
-parseFloat("0xf") //15
-```
-
-### 数值模式
-它会忽略字符串前面的空格,直到找到第一个非空个字符.<br/>
-如果第一个字符不是数字字符或者负号.就会返回NaN.如果第一个字符是数字字符,会继续解析下个字符
-
-### 注意
-#### Number()函数各种数据类型转换为数值过程<strong>复杂</strong>而且<strong>不合理</strong>.所以优先用parseInt()方法和parseFloat()方法.
-#### 使用时不指定基数意味以为让函数决定如何解析输入的字符串,因此为了避免错误的解析,在什么的情况下明确指定基数.
+      <ul>
+          <li>that</li>
+          <li></li>
+          <li></li>
+          <li></li>
+      </ul>
+      
+      //获取that文本的节点
+      querySelector('ul li');
+      querySelectorAll('ul li')[0];
+ ```
+ 函数querySelector-querySelectorAll区别是querySelector是获得第一个节点.querySelectorAll获得匹配节点对象.
+   
+### 获取元素不常见方法
+   document.anchors  //文档中所有带name特性的<a>元素
+   document.applets  //文档中所有<applet>元素
+   document.forms   //文档中所有<form>元素
+   document.images   //文档中所有<img>元素
+   document.links   //文档中所有带href特性的<a>元素
+#### 注意使用document开始,否则会返回undefined.
