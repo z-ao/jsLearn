@@ -1,13 +1,13 @@
 ## 获取节点
 ### 获取元素的常见方法有
-   getElementById 
-   getElementsByTagName
-   getElementsByClassName
+   getElementById<br/>
+   getElementsByTagName<br/>
+   getElementsByClassName<br/>
    getElementsByName
    
 
 ### 获取元素的较常见方法
-    querySelector()
+    querySelector()<br/>
     querySelectorAll()
 ```
       <ul>
